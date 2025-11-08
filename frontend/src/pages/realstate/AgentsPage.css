@@ -252,3 +252,10 @@
     height: 280px;
   }
 }
+
+.agent-about {
+  font-size: 1rem;
+  color: #5c4b34;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
