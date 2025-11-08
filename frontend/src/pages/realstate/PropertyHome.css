@@ -1,0 +1,89 @@
+.property-home {
+  background-color: #f8f8f8;
+  min-height: 100vh;
+  padding-bottom: 40px;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 40px;
+}
+
+/* Filter Section */
+.filter-section {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.filter-buttons button {
+  background: #e6e6e6;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filter-buttons button:hover {
+  background-color: #c0a36b;
+  color: white;
+}
+
+.filter-buttons button.active {
+  background-color: #8b7355;
+  color: white;
+}
+
+/* Property Grid */
+.properties-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+}
+
+/* Loading */
+.loading-state {
+  text-align: center;
+  padding: 60px 0;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 5px solid #ccc;
+  border-top-color: #8b7355;
+  border-radius: 50%;
+  margin: 0 auto 10px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Empty */
+.empty-state {
+  text-align: center;
+  padding: 40px 0;
+  font-size: 1.2rem;
+  color: #666;
+}

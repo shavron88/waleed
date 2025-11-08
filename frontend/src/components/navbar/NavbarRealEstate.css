@@ -1,0 +1,26 @@
+.navbar-realestate {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #20232a;
+  color: #61dafb;
+  padding: 15px 40px;
+}
+
+.navbar-realestate .logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.navbar-realestate .nav-links a {
+  color: #61dafb;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.navbar-realestate .nav-links a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}

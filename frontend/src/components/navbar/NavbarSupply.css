@@ -1,0 +1,25 @@
+.navbar-supply {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #2a2a72;
+  background: linear-gradient(to right, #009ffd, #2a2a72);
+  color: white;
+  padding: 15px 40px;
+}
+
+.navbar-supply h2 {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.navbar-supply .nav-links a {
+  color: #f5f5f5;
+  text-decoration: none;
+  margin: 0 15px;
+  transition: 0.3s;
+}
+
+.navbar-supply .nav-links a:hover {
+  color: #ffd700;
+}

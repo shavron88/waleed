@@ -1,0 +1,264 @@
+.request-page {
+  flex: 1;
+  min-height: 100vh;
+}
+
+.request-hero {
+  background: linear-gradient(135deg, #f5f1e8 0%, #e8dcc4 50%, #d4c4a8 100%);
+  padding: 4rem 2rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.request-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1600');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.1;
+  z-index: 0;
+}
+
+.request-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.page-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #2d2d2d;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.title-icon {
+  width: 45px;
+  height: 45px;
+  color: #8B7355;
+}
+
+.page-subtitle {
+  font-size: 1.2rem;
+  color: #6d5a44;
+}
+
+.form-container {
+  max-width: 900px;
+  margin: -3rem auto 4rem;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 10;
+}
+
+.request-form-card {
+  background: white;
+  border-radius: 20px;
+  padding: 3rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  border: 1px solid #f0e8dc;
+}
+
+.form-section {
+  margin-bottom: 2.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid #f0e8dc;
+}
+
+.form-section:last-of-type {
+  border-bottom: none;
+  margin-bottom: 2rem;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #2d2d2d;
+  margin-bottom: 1.5rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #2d2d2d;
+  font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group button[role="combobox"] {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 2px solid #d4c4a8;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: white;
+  color: #2d2d2d;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group button[role="combobox"]:focus {
+  outline: none;
+  border-color: #8B7355;
+  box-shadow: 0 0 0 3px rgba(139, 115, 85, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+  font-family: inherit;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 1.25rem;
+  background: #8B7355;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: #6d5a44;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(139, 115, 85, 0.3);
+}
+
+.success-container {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f5f1e8 0%, #e8dcc4 100%);
+}
+
+.success-content {
+  text-align: center;
+  max-width: 600px;
+  background: white;
+  padding: 4rem 3rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.success-icon {
+  width: 80px;
+  height: 80px;
+  color: #4CAF50;
+  margin: 0 auto 2rem;
+}
+
+.success-content h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #2d2d2d;
+  margin-bottom: 1rem;
+}
+
+.success-content p {
+  color: #6d5a44;
+  font-size: 1.15rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.success-btn {
+  padding: 1rem 2.5rem;
+  background: #8B7355;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.success-btn:hover {
+  background: #6d5a44;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(139, 115, 85, 0.3);
+}
+
+@media (max-width: 768px) {
+  .request-hero {
+    padding: 3rem 1rem 2rem;
+  }
+
+  .page-title {
+    font-size: 2rem;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .title-icon {
+    width: 35px;
+    height: 35px;
+  }
+
+  .page-subtitle {
+    font-size: 1.05rem;
+  }
+
+  .form-container {
+    margin: -2rem auto 2rem;
+    padding: 0 1rem;
+  }
+
+  .request-form-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .success-content {
+    padding: 3rem 2rem;
+  }
+
+  .success-content h1 {
+    font-size: 1.75rem;
+  }
+
+  .success-icon {
+    width: 60px;
+    height: 60px;
+  }
+}

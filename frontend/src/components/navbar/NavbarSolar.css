@@ -1,0 +1,25 @@
+.navbar-solar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #ffcc33, #ff8800);
+  color: white;
+  padding: 15px 40px;
+}
+
+.navbar-solar h2 {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.navbar-solar .nav-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.navbar-solar .nav-links a:hover {
+  color: #222;
+}
