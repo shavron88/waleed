@@ -1,40 +1,52 @@
-import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import HomePage from "./pages/HomePage";
-import PropertyDetails from './pages/realstate/PropertyDetails';
-import NearbyProperties from './pages/realstate/NearbyProperties';
-import AgentsPage from './pages/realstate/AgentsPage';
-import PropertyRequestForm from './pages/realstate/PropertyRequestForm';
-import AboutPage from './pages/realstate/AboutPage';
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-// 🧭 Navbars for each section
-import NavbarRealEstate from './components/navbar/NavbarRealEstate';
-import NavbarSolar from './components/navbar/NavbarSolar';
-import NavbarSupply from './components/navbar/NavbarSupply';
+// 🏠 Main homepage
+import HomePage from "./components/pages/HomePage";
 
-// 🌍 Common components
-import Footer from './components/Footer';
-import './App.css';
+// 🏡 Real Estate Pages
+import PropertyHome from "./components/pages/realstate/PropertyHome";
+import PropertyDetails from "./components/pages/realstate/PropertyDetails";
+import NearbyProperties from "./components/pages/realstate/NearbyProperties";
+import AgentsPage from "./components/pages/realstate/AgentsPage";
+import PropertyRequestForm from "./components/pages/realstate/PropertyRequestForm";
+import AboutPage from "./components/pages/realstate/AboutPage";
 
-// 🏡 Real Estate pages
-import PropertyHome from './pages/realstate/PropertyHome.jsx';
+// ☀️ Solar Pages
+import SolarBookingPage from "./components/pages/solar/SolarBookingPage";
+import SolarHome from "./components/pages/solar/SolarHome";
+import TestimonialsPage from "./components/pages/solar/TestimonialsPage";
+import Contact from "./components/pages/solar/Contact";
 
-// ☀️ Solar pages
-import SolarBookingPage from './pages/solar/SolarBookingPage';
-import SolarHome from './pages/solar/SolarHome';
-import TestimonialsPage from './pages/solar/TestimonialsPage';
-import Contact from './pages/solar/Contact';
+// ⚡ ElectroFix
+import ElectroHome from "./components/pages/ElectroFix/ElectroHome";
+import NavbarElectroFix from "./components/navbar/NavbarElectroFix";
+import FloatingRepairButton from "./components/FloatingRepairButton";
+
+
+
+// 🚛 Supply Chain (placeholder for now)
+// import SupplyHome from "./components/pages/supply/SupplyHome"; // add later
+
+// 🧭 Navbars
+import NavbarRealEstate from "./components/navbar/NavbarRealEstate";
+import NavbarSolar from "./components/navbar/NavbarSolar";
+import NavbarSupply from "./components/navbar/NavbarSupply";
+
+// 🌍 Common
+import Footer from "./components/Footer";
+import "./App.css";
 
 // ✅ Simple notification system
-function showToast(message, type = 'info') {
-  const toast = document.createElement('div');
+function showToast(message, type = "info") {
+  const toast = document.createElement("div");
   toast.className = `custom-toast ${type}`;
   toast.textContent = message;
   document.body.appendChild(toast);
 
-  setTimeout(() => toast.classList.add('show'), 100);
+  setTimeout(() => toast.classList.add("show"), 100);
   setTimeout(() => {
-    toast.classList.remove('show');
+    toast.classList.remove("show");
     setTimeout(() => toast.remove(), 300);
   }, 3000);
 }
@@ -50,19 +62,114 @@ function App() {
           <Route path="/" element={<HomePage />} />
 
           {/* 🏡 Real Estate Section */}
-          <Route path="/PropertyHome" element={<><NavbarRealEstate /><PropertyHome /></>} />
-          <Route path="/agents" element={<><NavbarRealEstate /><AgentsPage /></>} />
-          <Route path="/nearby" element={<><NavbarRealEstate /><NearbyProperties /></>} />
-          <Route path="/request-property" element={<><NavbarRealEstate /><PropertyRequestForm /></>} />
+          <Route
+            path="/PropertyHome"
+            element={
+              <>
+                <NavbarRealEstate />
+                <PropertyHome />
+              </>
+            }
+          />
+          <Route
+            path="/agents"
+            element={
+              <>
+                <NavbarRealEstate />
+                <AgentsPage />
+              </>
+            }
+          />
+          <Route
+            path="/nearby"
+            element={
+              <>
+                <NavbarRealEstate />
+                <NearbyProperties />
+              </>
+            }
+          />
+          <Route
+            path="/request-property"
+            element={
+              <>
+                <NavbarRealEstate />
+                <PropertyRequestForm />
+              </>
+            }
+          />
+          <Route
+            path="/about-realestate"
+            element={
+              <>
+                <NavbarRealEstate />
+                <AboutPage />
+              </>
+            }
+          />
 
           {/* ☀️ Solar Section */}
-          <Route path="/solar-home" element={<><NavbarSolar /><SolarHome /></>} />
-          <Route path="/solar-booking" element={<><NavbarSolar /><SolarBookingPage /></>} />
-          <Route path="/testimonials" element={<><NavbarSolar /><TestimonialsPage /></>} />
-          <Route path="/contact" element={<><NavbarSolar /><Contact /></>} />
+          <Route
+            path="/solar-home"
+            element={
+              <>
+                <NavbarSolar />
+                <SolarHome />
+              </>
+            }
+          />
+          <Route
+            path="/solar-booking"
+            element={
+              <>
+                <NavbarSolar />
+                <SolarBookingPage />
+              </>
+            }
+          />
+          <Route
+            path="/testimonials"
+            element={
+              <>
+                <NavbarSolar />
+                <TestimonialsPage />
+              </>
+            }
+          />
+          <Route
+            path="/contact"
+            element={
+              <>
+                <NavbarSolar />
+                <Contact />
+              </>
+            }
+          />
 
-          {/* 🚛 Supply Chain Section */}
-          <Route path="/supply-home" element={<><NavbarSupply />{/* Add Supply components here later */}</>} />
+          {/* ⚡ ElectroFix Section */}<Route
+  
+  path="/electrofix"
+  element={
+    <>
+      <NavbarElectroFix />
+      <ElectroHome />
+      <Footer />
+    </>
+  }
+/>
+
+
+
+          {/* 🚛 Supply Section (to be added) */}
+          <Route
+            path="/supply-home"
+            element={
+              <>
+                <NavbarSupply />
+                {/* Add Supply components here later */}
+              </>
+            }
+          />
         </Routes>
 
         <Footer />

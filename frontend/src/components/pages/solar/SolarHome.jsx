@@ -7,7 +7,7 @@ export default function SolarHome() {
 
       {/* Hero Section */}
       <section className="hero">
-        <img src="/icons/big solar.jpg" alt="Solar Panels" className="hero-img" />
+        {/* <img src="/icons/big solar.jpg" alt="Solar Panels" className="hero-img" /> */}
         <div className="hero-text">
           <h1>Power Your Future with Solar Energy</h1>
           <p>Reliable • Affordable • Sustainable</p>

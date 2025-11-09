@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import PropertyCard from "../../components/PropertyCard";
+import PropertyCard from "../../PropertyCard";
 
-import HeroSection from "../../components/HeroSection";
+import HeroSection from "../../HeroSection";
 import "./PropertyHome.css";
 
 const PropertyHome = () => {

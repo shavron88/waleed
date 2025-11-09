@@ -1,0 +1,69 @@
+.electro-home {
+  font-family: "Poppins", sans-serif;
+  color: #111;
+  background: #f6f7fb;
+}
+
+.hero {
+  background: linear-gradient(135deg, #001f3f, #0074d9);
+  color: white;
+  text-align: center;
+  padding: 6rem 2rem;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.hero-text span {
+  color: #00d4ff;
+}
+
+.cta {
+  margin-top: 1.5rem;
+  background: #00d4ff;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cta:hover {
+  background: #fff;
+  color: #0074d9;
+  border: 2px solid #00d4ff;
+}
+
+.categories {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.category-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.category-card:hover {
+  transform: translateY(-10px);
+}
+
+.category-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}

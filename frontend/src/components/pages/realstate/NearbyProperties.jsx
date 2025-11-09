@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import PropertyCard from "../../components/PropertyCard";
+import PropertyCard from "../../PropertyCard";
 import "./NearbyProperties.css";
 
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;

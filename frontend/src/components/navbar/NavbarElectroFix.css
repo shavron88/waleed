@@ -1,0 +1,23 @@
+.navbar-electro {
+  background: #1e1e2f;
+  color: #fff;
+  padding: 15px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-electro h2 {
+  font-size: 24px;
+}
+
+.navbar-electro .nav-links a {
+  color: #00e0ff;
+  text-decoration: none;
+  margin-left: 20px;
+  transition: 0.3s;
+}
+
+.navbar-electro .nav-links a:hover {
+  color: #ffd700;
+}

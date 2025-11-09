@@ -1,12 +1,10 @@
 import React from "react";
 import "./HomePage.css";
-import { useNavigate, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const HomePage = () => {
-  const navigate = useNavigate();
-
   return (
-    <div className="home">
+    <div className="homepage">
       {/* ===== Business Card Section ===== */}
       <section className="business-card">
         <div className="card-content">
@@ -22,20 +20,23 @@ const HomePage = () => {
             Supply Solutions.
           </p>
 
-          <Link to="/solar-home" className="option-btn solar">
-  ☀️ Solar
-</Link>
-
-            <Link to="/PropertyHome" className="option-btn real-estate">
-              🏡 Real Estate
+          <div className="options">
+            <Link to="/solar-home" className="option-btn solar">
+              ☀️ Solar
             </Link>
 
             <Link to="/PropertyHome" className="option-btn real-estate">
               🏡 Real Estate
             </Link>
-          <button onClick={() => navigate("/supply")} className="supply-btn">
-            🚛 Supply Chain
-          </button>
+
+            <Link to="/electrofix" className="option-btn electrofix">
+              ⚡ ElectroFix
+            </Link>
+
+            <Link to="/supply-home" className="option-btn supply">
+              🚛 Supply Chain
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -53,4 +54,6 @@ const HomePage = () => {
 };
 
 export default HomePage;
+
+
 

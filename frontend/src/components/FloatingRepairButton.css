@@ -1,0 +1,53 @@
+.floating-repair-btn {
+  position: fixed;
+  left: 20px;
+  bottom: 25px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: #00d4ff;
+  box-shadow: 0 8px 20px rgba(0, 212, 255, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  animation: float 2s ease-in-out infinite;
+  z-index: 1000;
+}
+
+.repair-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.repair-popup {
+  position: absolute;
+  left: 90px;
+  bottom: 10px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+  padding: 1rem;
+  width: 220px;
+  animation: slideIn 0.5s ease;
+}
+
+.repair-btn {
+  margin-top: 8px;
+  background: #0074d9;
+  border: none;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-15px); }
+  to { opacity: 1; transform: translateX(0); }
+}
